@@ -1,0 +1,3 @@
+User-agent: *
+Disallow:
+Sitemap: file:////Users/lurning.hut/Documents/Publii/sites/lurninghut/preview/sitemap.xml

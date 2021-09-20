@@ -1,0 +1,68 @@
+[
+    {
+        "name": "Navigation Bar",
+        "position": "mainMenu",
+        "items": [
+            {
+                "id": 1631354689458,
+                "label": "Java",
+                "title": "Test Attribute",
+                "type": "tag",
+                "target": "_self",
+                "rel": "",
+                "link": 1,
+                "cssClass": "",
+                "isHidden": false,
+                "items": []
+            },
+            {
+                "id": 1631406973932,
+                "label": "AWS",
+                "title": "",
+                "type": "tag",
+                "target": "_self",
+                "rel": "",
+                "link": 4,
+                "cssClass": "",
+                "isHidden": false,
+                "items": []
+            },
+            {
+                "id": 1631652546112,
+                "label": "Unix",
+                "title": "",
+                "type": "tag",
+                "target": "_self",
+                "rel": "",
+                "link": 5,
+                "cssClass": "",
+                "isHidden": false,
+                "items": []
+            },
+            {
+                "id": 1631820999228,
+                "label": "Networking",
+                "title": "",
+                "type": "tag",
+                "target": "_self",
+                "rel": "",
+                "link": 6,
+                "cssClass": "",
+                "isHidden": false,
+                "items": []
+            },
+            {
+                "id": 1632148191739,
+                "label": "GIT",
+                "title": "",
+                "type": "tag",
+                "target": "_self",
+                "rel": "",
+                "link": 7,
+                "cssClass": "",
+                "isHidden": false,
+                "items": []
+            }
+        ]
+    }
+]
