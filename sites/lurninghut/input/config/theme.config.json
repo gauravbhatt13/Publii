@@ -36,7 +36,7 @@
         "mobilemenu": "sidebar",
         "mobilemenuExpandableSubmenus": true,
         "heightHero": "40vh",
-        "displayHeroImage": false,
+        "displayHeroImage": true,
         "uploadHero": "media/website/front.png",
         "uploadHeroAlt": "",
         "uploadHeroCaption": "",
@@ -106,7 +106,7 @@
     },
     "postConfig": {
         "displayDate": 1,
-        "displayAuthor": "0",
+        "displayAuthor": "1",
         "displayLastUpdatedDate": 1,
         "displayTags": 1,
         "displayShareButtons": 1,

@@ -62,6 +62,18 @@
                 "cssClass": "",
                 "isHidden": false,
                 "items": []
+            },
+            {
+                "id": 1632256611014,
+                "label": "Security",
+                "title": "",
+                "type": "tag",
+                "target": "_self",
+                "rel": "",
+                "link": 8,
+                "cssClass": "",
+                "isHidden": false,
+                "items": []
             }
         ]
     }
