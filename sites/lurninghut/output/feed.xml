@@ -3,12 +3,120 @@
     <title>lurninghut</title>
     <link href="https://lurninghut.com/feed.xml" rel="self" />
     <link href="https://lurninghut.com" />
-    <updated>2021-09-25T14:06:43+10:00</updated>
+    <updated>2021-10-02T12:19:47+10:00</updated>
     <author>
         <name>Gaurav Bhatt</name>
     </author>
     <id>https://lurninghut.com</id>
 
+    <entry>
+        <title>VSCODE Java demo</title>
+        <author>
+            <name>Gaurav Bhatt</name>
+        </author>
+        <link href="https://lurninghut.com/vscode-java-demo.html"/>
+        <id>https://lurninghut.com/vscode-java-demo.html</id>
+            <category term="JAVA"/>
+
+        <updated>2021-10-02T12:19:47+10:00</updated>
+            <summary>
+                <![CDATA[
+                    The goal of any IDE should be to increase developer productivity and in Java world today Intellij and VSCode are two popular IDEs used by the developers. In this demo I am going to show how we can integrate Java language tools by installing necessary&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p>The goal of any IDE should be to increase developer productivity and in Java world today Intellij and VSCode are two popular IDEs used by the developers. In this demo I am going to show how we can integrate Java language tools by installing necessary VSCode extensions and create a productive Java development environment.</p>
+<h4>Demo</h4>
+<figure class="post__video"><iframe loading="lazy" width="560" height="314" src="https://www.youtube.com/embed/RdBzo6buIn0" allowfullscreen="allowfullscreen" data-mce-fragment="1"></iframe></figure>
+<h4>Install Extension Pack</h4>
+<p>Open the VSCode IDE</p>
+<figure class="post__image"><img loading="lazy"  src="https://lurninghut.com/media/posts/19/Screenshot-2021-10-02-at-11.00.32-AM.png" sizes="(max-width: 48em) 100vw, 768px" srcset="https://lurninghut.com/media/posts/19/responsive/Screenshot-2021-10-02-at-11.00.32-AM-xs.png 300w ,https://lurninghut.com/media/posts/19/responsive/Screenshot-2021-10-02-at-11.00.32-AM-sm.png 480w ,https://lurninghut.com/media/posts/19/responsive/Screenshot-2021-10-02-at-11.00.32-AM-md.png 768w ,https://lurninghut.com/media/posts/19/responsive/Screenshot-2021-10-02-at-11.00.32-AM-lg.png 1024w ,https://lurninghut.com/media/posts/19/responsive/Screenshot-2021-10-02-at-11.00.32-AM-xl.png 1360w ,https://lurninghut.com/media/posts/19/responsive/Screenshot-2021-10-02-at-11.00.32-AM-2xl.png 1600w"  alt="" width="2700" height="1514"></figure>
+<p>Now search for the extension in the extensions tab by searching for 'java extension pack'. As shown below we will see as part of the pack there are 6 extensions being pulled which are helpful while working with any Java based project.</p>
+<figure class="post__image"><img loading="lazy"  src="https://lurninghut.com/media/posts/19/Screenshot-2021-10-02-at-11.01.52-AM.png" sizes="(max-width: 48em) 100vw, 768px" srcset="https://lurninghut.com/media/posts/19/responsive/Screenshot-2021-10-02-at-11.01.52-AM-xs.png 300w ,https://lurninghut.com/media/posts/19/responsive/Screenshot-2021-10-02-at-11.01.52-AM-sm.png 480w ,https://lurninghut.com/media/posts/19/responsive/Screenshot-2021-10-02-at-11.01.52-AM-md.png 768w ,https://lurninghut.com/media/posts/19/responsive/Screenshot-2021-10-02-at-11.01.52-AM-lg.png 1024w ,https://lurninghut.com/media/posts/19/responsive/Screenshot-2021-10-02-at-11.01.52-AM-xl.png 1360w ,https://lurninghut.com/media/posts/19/responsive/Screenshot-2021-10-02-at-11.01.52-AM-2xl.png 1600w"  alt="" width="2728" height="1370"></figure>
+<h4>Create a simple Java project</h4>
+<p>Once you install the extension pack, open Command Palette using Shift+Command+A and type 'java'. You will see options like 'Create Java Project' and click on it.</p>
+<figure class="post__image"><img loading="lazy"  src="https://lurninghut.com/media/posts/19/Screenshot-2021-10-02-at-11.04.48-AM-2.png" sizes="(max-width: 48em) 100vw, 768px" srcset="https://lurninghut.com/media/posts/19/responsive/Screenshot-2021-10-02-at-11.04.48-AM-2-xs.png 300w ,https://lurninghut.com/media/posts/19/responsive/Screenshot-2021-10-02-at-11.04.48-AM-2-sm.png 480w ,https://lurninghut.com/media/posts/19/responsive/Screenshot-2021-10-02-at-11.04.48-AM-2-md.png 768w ,https://lurninghut.com/media/posts/19/responsive/Screenshot-2021-10-02-at-11.04.48-AM-2-lg.png 1024w ,https://lurninghut.com/media/posts/19/responsive/Screenshot-2021-10-02-at-11.04.48-AM-2-xl.png 1360w ,https://lurninghut.com/media/posts/19/responsive/Screenshot-2021-10-02-at-11.04.48-AM-2-2xl.png 1600w"  alt="" width="2216" height="1010"></figure>
+<p> </p>
+<p>After clicking you will see two options to select the project build tool as either to create a Maven based project or choose no build tool for your project.</p>
+<figure class="post__image"><img loading="lazy"  src="https://lurninghut.com/media/posts/19/Screenshot-2021-10-02-at-11.11.34-AM.png" sizes="(max-width: 48em) 100vw, 768px" srcset="https://lurninghut.com/media/posts/19/responsive/Screenshot-2021-10-02-at-11.11.34-AM-xs.png 300w ,https://lurninghut.com/media/posts/19/responsive/Screenshot-2021-10-02-at-11.11.34-AM-sm.png 480w ,https://lurninghut.com/media/posts/19/responsive/Screenshot-2021-10-02-at-11.11.34-AM-md.png 768w ,https://lurninghut.com/media/posts/19/responsive/Screenshot-2021-10-02-at-11.11.34-AM-lg.png 1024w ,https://lurninghut.com/media/posts/19/responsive/Screenshot-2021-10-02-at-11.11.34-AM-xl.png 1360w ,https://lurninghut.com/media/posts/19/responsive/Screenshot-2021-10-02-at-11.11.34-AM-2xl.png 1600w"  alt="" width="2118" height="480"></figure>
+<p>On choosing a No build tools option it will ask for the project name:</p>
+<figure class="post__image"><img loading="lazy"  style="color: var(--text-editor-body-color); font-family: var(--font-base); font-weight: var(--font-weight-normal); font-size: 17.7235px; outline: 3px solid rgba(var(--primary-color-rgb), 0.55)  !important;" src="https://lurninghut.com/media/posts/19/Screenshot-2021-10-02-at-11.13.33-AM.png" sizes="(max-width: 48em) 100vw, 768px" srcset="https://lurninghut.com/media/posts/19/responsive/Screenshot-2021-10-02-at-11.13.33-AM-xs.png 300w ,https://lurninghut.com/media/posts/19/responsive/Screenshot-2021-10-02-at-11.13.33-AM-sm.png 480w ,https://lurninghut.com/media/posts/19/responsive/Screenshot-2021-10-02-at-11.13.33-AM-md.png 768w ,https://lurninghut.com/media/posts/19/responsive/Screenshot-2021-10-02-at-11.13.33-AM-lg.png 1024w ,https://lurninghut.com/media/posts/19/responsive/Screenshot-2021-10-02-at-11.13.33-AM-xl.png 1360w ,https://lurninghut.com/media/posts/19/responsive/Screenshot-2021-10-02-at-11.13.33-AM-2xl.png 1600w"  alt="" width="2054" height="596"></figure>
+<p>And then it will create a project as follows:</p>
+<figure class="post__image"><img loading="lazy"  src="https://lurninghut.com/media/posts/19/Screenshot-2021-10-02-at-11.10.15-AM-2.png" sizes="(max-width: 48em) 100vw, 768px" srcset="https://lurninghut.com/media/posts/19/responsive/Screenshot-2021-10-02-at-11.10.15-AM-2-xs.png 300w ,https://lurninghut.com/media/posts/19/responsive/Screenshot-2021-10-02-at-11.10.15-AM-2-sm.png 480w ,https://lurninghut.com/media/posts/19/responsive/Screenshot-2021-10-02-at-11.10.15-AM-2-md.png 768w ,https://lurninghut.com/media/posts/19/responsive/Screenshot-2021-10-02-at-11.10.15-AM-2-lg.png 1024w ,https://lurninghut.com/media/posts/19/responsive/Screenshot-2021-10-02-at-11.10.15-AM-2-xl.png 1360w ,https://lurninghut.com/media/posts/19/responsive/Screenshot-2021-10-02-at-11.10.15-AM-2-2xl.png 1600w"  alt="" width="1670" height="730"></figure>
+<h4>Create a maven project</h4>
+<p>Lets create a maven project by going to the command palette using Shift+Command+A as follows:</p>
+<figure class="post__image"><img loading="lazy"  src="https://lurninghut.com/media/posts/19/Screenshot-2021-10-02-at-11.16.20-AM.png" sizes="(max-width: 48em) 100vw, 768px" srcset="https://lurninghut.com/media/posts/19/responsive/Screenshot-2021-10-02-at-11.16.20-AM-xs.png 300w ,https://lurninghut.com/media/posts/19/responsive/Screenshot-2021-10-02-at-11.16.20-AM-sm.png 480w ,https://lurninghut.com/media/posts/19/responsive/Screenshot-2021-10-02-at-11.16.20-AM-md.png 768w ,https://lurninghut.com/media/posts/19/responsive/Screenshot-2021-10-02-at-11.16.20-AM-lg.png 1024w ,https://lurninghut.com/media/posts/19/responsive/Screenshot-2021-10-02-at-11.16.20-AM-xl.png 1360w ,https://lurninghut.com/media/posts/19/responsive/Screenshot-2021-10-02-at-11.16.20-AM-2xl.png 1600w"  alt="" width="2068" height="460"></figure>
+<p>It will then ask you to choose an archetype, I am choosing archetype-quickstart-jdk8:</p>
+<figure class="post__image"><img loading="lazy"  src="https://lurninghut.com/media/posts/19/Screenshot-2021-10-02-at-11.18.53-AM.png" sizes="(max-width: 48em) 100vw, 768px" srcset="https://lurninghut.com/media/posts/19/responsive/Screenshot-2021-10-02-at-11.18.53-AM-xs.png 300w ,https://lurninghut.com/media/posts/19/responsive/Screenshot-2021-10-02-at-11.18.53-AM-sm.png 480w ,https://lurninghut.com/media/posts/19/responsive/Screenshot-2021-10-02-at-11.18.53-AM-md.png 768w ,https://lurninghut.com/media/posts/19/responsive/Screenshot-2021-10-02-at-11.18.53-AM-lg.png 1024w ,https://lurninghut.com/media/posts/19/responsive/Screenshot-2021-10-02-at-11.18.53-AM-xl.png 1360w ,https://lurninghut.com/media/posts/19/responsive/Screenshot-2021-10-02-at-11.18.53-AM-2xl.png 1600w"  alt="" width="2084" height="802"></figure>
+<p>then choose the version for the archetype and a destination folder:</p>
+<figure class="post__image"><img loading="lazy"  src="https://lurninghut.com/media/posts/19/Screenshot-2021-10-02-at-11.20.06-AM.png" sizes="(max-width: 48em) 100vw, 768px" srcset="https://lurninghut.com/media/posts/19/responsive/Screenshot-2021-10-02-at-11.20.06-AM-xs.png 300w ,https://lurninghut.com/media/posts/19/responsive/Screenshot-2021-10-02-at-11.20.06-AM-sm.png 480w ,https://lurninghut.com/media/posts/19/responsive/Screenshot-2021-10-02-at-11.20.06-AM-md.png 768w ,https://lurninghut.com/media/posts/19/responsive/Screenshot-2021-10-02-at-11.20.06-AM-lg.png 1024w ,https://lurninghut.com/media/posts/19/responsive/Screenshot-2021-10-02-at-11.20.06-AM-xl.png 1360w ,https://lurninghut.com/media/posts/19/responsive/Screenshot-2021-10-02-at-11.20.06-AM-2xl.png 1600w"  alt="" width="342" height="111"></figure>.  <figure class="post__image"><img loading="lazy"  src="https://lurninghut.com/media/posts/19/Screenshot-2021-10-02-at-11.21.28-AM.png" sizes="(max-width: 48em) 100vw, 768px" srcset="https://lurninghut.com/media/posts/19/responsive/Screenshot-2021-10-02-at-11.21.28-AM-xs.png 300w ,https://lurninghut.com/media/posts/19/responsive/Screenshot-2021-10-02-at-11.21.28-AM-sm.png 480w ,https://lurninghut.com/media/posts/19/responsive/Screenshot-2021-10-02-at-11.21.28-AM-md.png 768w ,https://lurninghut.com/media/posts/19/responsive/Screenshot-2021-10-02-at-11.21.28-AM-lg.png 1024w ,https://lurninghut.com/media/posts/19/responsive/Screenshot-2021-10-02-at-11.21.28-AM-xl.png 1360w ,https://lurninghut.com/media/posts/19/responsive/Screenshot-2021-10-02-at-11.21.28-AM-2xl.png 1600w"  alt="" width="335" height="150"></figure>
+<p> </p>
+<p>The archetype will then interactively create the project by asking some details as shown below:</p>
+<figure class="post__image"><img loading="lazy"  src="https://lurninghut.com/media/posts/19/Screenshot-2021-10-02-at-11.24.58-AM.png" sizes="(max-width: 48em) 100vw, 768px" srcset="https://lurninghut.com/media/posts/19/responsive/Screenshot-2021-10-02-at-11.24.58-AM-xs.png 300w ,https://lurninghut.com/media/posts/19/responsive/Screenshot-2021-10-02-at-11.24.58-AM-sm.png 480w ,https://lurninghut.com/media/posts/19/responsive/Screenshot-2021-10-02-at-11.24.58-AM-md.png 768w ,https://lurninghut.com/media/posts/19/responsive/Screenshot-2021-10-02-at-11.24.58-AM-lg.png 1024w ,https://lurninghut.com/media/posts/19/responsive/Screenshot-2021-10-02-at-11.24.58-AM-xl.png 1360w ,https://lurninghut.com/media/posts/19/responsive/Screenshot-2021-10-02-at-11.24.58-AM-2xl.png 1600w"  alt="" width="1912" height="926"></figure>
+<p>Once you open the project in the idea by choosing the folder location you will see the following:</p>
+<figure class="post__image"><img loading="lazy"  src="https://lurninghut.com/media/posts/19/Screenshot-2021-10-02-at-11.25.58-AM.png" sizes="(max-width: 48em) 100vw, 768px" srcset="https://lurninghut.com/media/posts/19/responsive/Screenshot-2021-10-02-at-11.25.58-AM-xs.png 300w ,https://lurninghut.com/media/posts/19/responsive/Screenshot-2021-10-02-at-11.25.58-AM-sm.png 480w ,https://lurninghut.com/media/posts/19/responsive/Screenshot-2021-10-02-at-11.25.58-AM-md.png 768w ,https://lurninghut.com/media/posts/19/responsive/Screenshot-2021-10-02-at-11.25.58-AM-lg.png 1024w ,https://lurninghut.com/media/posts/19/responsive/Screenshot-2021-10-02-at-11.25.58-AM-xl.png 1360w ,https://lurninghut.com/media/posts/19/responsive/Screenshot-2021-10-02-at-11.25.58-AM-2xl.png 1600w"  alt="" width="1602" height="868"></figure>
+<p>Hope the above steps would help you to get started with Java using VSCode.</p>
+            ]]>
+        </content>
+    </entry>
+    <entry>
+        <title> Github Actions: Building Spring boot application</title>
+        <author>
+            <name>Gaurav Bhatt</name>
+        </author>
+        <link href="https://lurninghut.com/github-actions-building-spring-boot-application.html"/>
+        <id>https://lurninghut.com/github-actions-building-spring-boot-application.html</id>
+            <category term="GIT"/>
+
+        <updated>2021-10-02T03:42:51+10:00</updated>
+            <summary>
+                <![CDATA[
+                    Github now a days is not just used as a central Git repository by the organisations but also as a tool for orchestration of CI/CD pipelines. Github actions automate all the software development workflows and enable build, test and deployment right from Github. In the&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p>Github now a days is not just used as a central Git repository by the organisations but also as a tool for orchestration of CI/CD pipelines. <a href="https://github.com/features/actions" target="_blank" rel="noopener noreferrer">Github actions</a> automate all the software development workflows and enable build, test and deployment right from Github. In the demo we will see how we can use Github actions for basic development tasks by automating them using some configuration files.</p>
+<h4>Demo</h4>
+<figure class="post__video"><iframe loading="lazy" width="560" height="314" src="https://www.youtube.com/embed/mc7k2zOcQsg" allowfullscreen="allowfullscreen" data-mce-fragment="1"></iframe></figure>
+<h6>Resources</h6>
+<p>Github account : This will host the repository for our sample application which is to be built.</p>
+<h4>Sample spring boot application</h4>
+<p>Create a project from start.spring.io website as follows:</p>
+<p>Note that we chose a Gradle project with spring web as a dependency.</p>
+<figure class="post__image"><img loading="lazy"  src="https://lurninghut.com/media/posts/18/image.png" sizes="(max-width: 48em) 100vw, 768px" srcset="https://lurninghut.com/media/posts/18/responsive/image-xs.png 300w ,https://lurninghut.com/media/posts/18/responsive/image-sm.png 480w ,https://lurninghut.com/media/posts/18/responsive/image-md.png 768w ,https://lurninghut.com/media/posts/18/responsive/image-lg.png 1024w ,https://lurninghut.com/media/posts/18/responsive/image-xl.png 1360w ,https://lurninghut.com/media/posts/18/responsive/image-2xl.png 1600w"  alt="" width="2636" height="1244"></figure>
+<p>Open the downloaded project in Intellij IDE</p>
+<figure class="post__image"><img loading="lazy"  src="https://lurninghut.com/media/posts/18/Screenshot-2021-10-02-at-2.29.57-AM.png" sizes="(max-width: 48em) 100vw, 768px" srcset="https://lurninghut.com/media/posts/18/responsive/Screenshot-2021-10-02-at-2.29.57-AM-xs.png 300w ,https://lurninghut.com/media/posts/18/responsive/Screenshot-2021-10-02-at-2.29.57-AM-sm.png 480w ,https://lurninghut.com/media/posts/18/responsive/Screenshot-2021-10-02-at-2.29.57-AM-md.png 768w ,https://lurninghut.com/media/posts/18/responsive/Screenshot-2021-10-02-at-2.29.57-AM-lg.png 1024w ,https://lurninghut.com/media/posts/18/responsive/Screenshot-2021-10-02-at-2.29.57-AM-xl.png 1360w ,https://lurninghut.com/media/posts/18/responsive/Screenshot-2021-10-02-at-2.29.57-AM-2xl.png 1600w"  alt="" width="2612" height="1128"></figure>
+<p>Create html page under static directory in resources folder.</p>
+<p>Run the application and go to the browser to load the html page as follows:</p>
+<figure class="post__image"><img loading="lazy"  src="https://lurninghut.com/media/posts/18/Screenshot-2021-10-02-at-2.35.43-AM.png" sizes="(max-width: 48em) 100vw, 768px" srcset="https://lurninghut.com/media/posts/18/responsive/Screenshot-2021-10-02-at-2.35.43-AM-xs.png 300w ,https://lurninghut.com/media/posts/18/responsive/Screenshot-2021-10-02-at-2.35.43-AM-sm.png 480w ,https://lurninghut.com/media/posts/18/responsive/Screenshot-2021-10-02-at-2.35.43-AM-md.png 768w ,https://lurninghut.com/media/posts/18/responsive/Screenshot-2021-10-02-at-2.35.43-AM-lg.png 1024w ,https://lurninghut.com/media/posts/18/responsive/Screenshot-2021-10-02-at-2.35.43-AM-xl.png 1360w ,https://lurninghut.com/media/posts/18/responsive/Screenshot-2021-10-02-at-2.35.43-AM-2xl.png 1600w"  alt="" width="1562" height="446"></figure>
+<h4>Github Workflow Changes</h4>
+<p> </p>
+<p>Create a repository in Github</p>
+<figure class="post__image"><img loading="lazy"  src="https://lurninghut.com/media/posts/18/Screenshot-2021-10-02-at-2.39.43-AM.png" sizes="(max-width: 48em) 100vw, 768px" srcset="https://lurninghut.com/media/posts/18/responsive/Screenshot-2021-10-02-at-2.39.43-AM-xs.png 300w ,https://lurninghut.com/media/posts/18/responsive/Screenshot-2021-10-02-at-2.39.43-AM-sm.png 480w ,https://lurninghut.com/media/posts/18/responsive/Screenshot-2021-10-02-at-2.39.43-AM-md.png 768w ,https://lurninghut.com/media/posts/18/responsive/Screenshot-2021-10-02-at-2.39.43-AM-lg.png 1024w ,https://lurninghut.com/media/posts/18/responsive/Screenshot-2021-10-02-at-2.39.43-AM-xl.png 1360w ,https://lurninghut.com/media/posts/18/responsive/Screenshot-2021-10-02-at-2.39.43-AM-2xl.png 1600w"  alt="" width="1386" height="736"></figure>
+<p>Push the local code to the repository using the commands mentioned as part of repository creation.</p>
+<figure class="post__image"><img loading="lazy"  src="https://lurninghut.com/media/posts/18/Screenshot-2021-10-02-at-2.40.36-AM.png" sizes="(max-width: 48em) 100vw, 768px" srcset="https://lurninghut.com/media/posts/18/responsive/Screenshot-2021-10-02-at-2.40.36-AM-xs.png 300w ,https://lurninghut.com/media/posts/18/responsive/Screenshot-2021-10-02-at-2.40.36-AM-sm.png 480w ,https://lurninghut.com/media/posts/18/responsive/Screenshot-2021-10-02-at-2.40.36-AM-md.png 768w ,https://lurninghut.com/media/posts/18/responsive/Screenshot-2021-10-02-at-2.40.36-AM-lg.png 1024w ,https://lurninghut.com/media/posts/18/responsive/Screenshot-2021-10-02-at-2.40.36-AM-xl.png 1360w ,https://lurninghut.com/media/posts/18/responsive/Screenshot-2021-10-02-at-2.40.36-AM-2xl.png 1600w"  alt="" width="1916" height="848"></figure>
+<p>Once we push the local changes we will see our repository has all the code:</p>
+<figure class="post__image"><img loading="lazy"  src="https://lurninghut.com/media/posts/18/Screenshot-2021-10-02-at-2.42.09-AM.png" sizes="(max-width: 48em) 100vw, 768px" srcset="https://lurninghut.com/media/posts/18/responsive/Screenshot-2021-10-02-at-2.42.09-AM-xs.png 300w ,https://lurninghut.com/media/posts/18/responsive/Screenshot-2021-10-02-at-2.42.09-AM-sm.png 480w ,https://lurninghut.com/media/posts/18/responsive/Screenshot-2021-10-02-at-2.42.09-AM-md.png 768w ,https://lurninghut.com/media/posts/18/responsive/Screenshot-2021-10-02-at-2.42.09-AM-lg.png 1024w ,https://lurninghut.com/media/posts/18/responsive/Screenshot-2021-10-02-at-2.42.09-AM-xl.png 1360w ,https://lurninghut.com/media/posts/18/responsive/Screenshot-2021-10-02-at-2.42.09-AM-2xl.png 1600w"  alt="" width="2364" height="1038"></figure>
+<p>In our local repository lets create a new directory as .github/workflows:</p>
+<figure class="post__image"><img loading="lazy"  src="https://lurninghut.com/media/posts/18/Screenshot-2021-10-02-at-2.43.18-AM.png" sizes="(max-width: 48em) 100vw, 768px" srcset="https://lurninghut.com/media/posts/18/responsive/Screenshot-2021-10-02-at-2.43.18-AM-xs.png 300w ,https://lurninghut.com/media/posts/18/responsive/Screenshot-2021-10-02-at-2.43.18-AM-sm.png 480w ,https://lurninghut.com/media/posts/18/responsive/Screenshot-2021-10-02-at-2.43.18-AM-md.png 768w ,https://lurninghut.com/media/posts/18/responsive/Screenshot-2021-10-02-at-2.43.18-AM-lg.png 1024w ,https://lurninghut.com/media/posts/18/responsive/Screenshot-2021-10-02-at-2.43.18-AM-xl.png 1360w ,https://lurninghut.com/media/posts/18/responsive/Screenshot-2021-10-02-at-2.43.18-AM-2xl.png 1600w"  alt="" width="1576" height="914"></figure>
+<p> </p>
+<p>Create a new file called demo.yml inside .github/workflows folder with the content as follows:</p>
+<figure class="post__image"><img loading="lazy"  src="https://lurninghut.com/media/posts/18/Screenshot-2021-10-02-at-2.45.32-AM.png" sizes="(max-width: 48em) 100vw, 768px" srcset="https://lurninghut.com/media/posts/18/responsive/Screenshot-2021-10-02-at-2.45.32-AM-xs.png 300w ,https://lurninghut.com/media/posts/18/responsive/Screenshot-2021-10-02-at-2.45.32-AM-sm.png 480w ,https://lurninghut.com/media/posts/18/responsive/Screenshot-2021-10-02-at-2.45.32-AM-md.png 768w ,https://lurninghut.com/media/posts/18/responsive/Screenshot-2021-10-02-at-2.45.32-AM-lg.png 1024w ,https://lurninghut.com/media/posts/18/responsive/Screenshot-2021-10-02-at-2.45.32-AM-xl.png 1360w ,https://lurninghut.com/media/posts/18/responsive/Screenshot-2021-10-02-at-2.45.32-AM-2xl.png 1600w"  alt="" width="1670" height="916"></figure>
+<p>The demo.yml file created above will be executed by Github actions to run our build code. The code as text is as follows:</p>
+<pre>name: Demo to setup a project with github actions<br><br>on:<br>  push:<br>    branches:<br>      - main<br><br>jobs:<br>  build:<br>    runs-on: ubuntu-latest<br><br>    steps:<br>      - name: checking out code<br>        uses: actions/checkout@v2<br><br>      - name: Setting up java env<br>        uses: actions/setup-java@v1<br>        with:<br>          java-version: 11<br><br>      - name: grant permissions<br>        run: chmod +x gradlew<br><br>      - name: build action<br>        run: ./gradlew build</pre>
+<p>Once the file is created, add it to local git by committing the changes:</p>
+<figure class="post__image"><img loading="lazy"  src="https://lurninghut.com/media/posts/18/Screenshot-2021-10-02-at-2.49.58-AM.png" sizes="(max-width: 48em) 100vw, 768px" srcset="https://lurninghut.com/media/posts/18/responsive/Screenshot-2021-10-02-at-2.49.58-AM-xs.png 300w ,https://lurninghut.com/media/posts/18/responsive/Screenshot-2021-10-02-at-2.49.58-AM-sm.png 480w ,https://lurninghut.com/media/posts/18/responsive/Screenshot-2021-10-02-at-2.49.58-AM-md.png 768w ,https://lurninghut.com/media/posts/18/responsive/Screenshot-2021-10-02-at-2.49.58-AM-lg.png 1024w ,https://lurninghut.com/media/posts/18/responsive/Screenshot-2021-10-02-at-2.49.58-AM-xl.png 1360w ,https://lurninghut.com/media/posts/18/responsive/Screenshot-2021-10-02-at-2.49.58-AM-2xl.png 1600w"  alt="" width="1480" height="910"></figure>
+<p>Once committed, just push the code to the Github repo:</p>
+<figure class="post__image"><img loading="lazy"  src="https://lurninghut.com/media/posts/18/Screenshot-2021-10-02-at-2.51.05-AM.png" sizes="(max-width: 48em) 100vw, 768px" srcset="https://lurninghut.com/media/posts/18/responsive/Screenshot-2021-10-02-at-2.51.05-AM-xs.png 300w ,https://lurninghut.com/media/posts/18/responsive/Screenshot-2021-10-02-at-2.51.05-AM-sm.png 480w ,https://lurninghut.com/media/posts/18/responsive/Screenshot-2021-10-02-at-2.51.05-AM-md.png 768w ,https://lurninghut.com/media/posts/18/responsive/Screenshot-2021-10-02-at-2.51.05-AM-lg.png 1024w ,https://lurninghut.com/media/posts/18/responsive/Screenshot-2021-10-02-at-2.51.05-AM-xl.png 1360w ,https://lurninghut.com/media/posts/18/responsive/Screenshot-2021-10-02-at-2.51.05-AM-2xl.png 1600w"  alt="" width="668" height="46"></figure>
+<p>Once pushed we can to the Github UI console and check the Actions tab:</p>
+<figure class="post__image"><img loading="lazy"  src="https://lurninghut.com/media/posts/18/Screenshot-2021-10-02-at-2.52.11-AM.png" sizes="(max-width: 48em) 100vw, 768px" srcset="https://lurninghut.com/media/posts/18/responsive/Screenshot-2021-10-02-at-2.52.11-AM-xs.png 300w ,https://lurninghut.com/media/posts/18/responsive/Screenshot-2021-10-02-at-2.52.11-AM-sm.png 480w ,https://lurninghut.com/media/posts/18/responsive/Screenshot-2021-10-02-at-2.52.11-AM-md.png 768w ,https://lurninghut.com/media/posts/18/responsive/Screenshot-2021-10-02-at-2.52.11-AM-lg.png 1024w ,https://lurninghut.com/media/posts/18/responsive/Screenshot-2021-10-02-at-2.52.11-AM-xl.png 1360w ,https://lurninghut.com/media/posts/18/responsive/Screenshot-2021-10-02-at-2.52.11-AM-2xl.png 1600w"  alt="" width="1472" height="1066"></figure>
+<p>All the above demonstrated how we can build any Spring boot app using Github Actions.</p>
+<p> </p>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>XSS - Cross site scripting Java Demo</title>
         <author>
@@ -19,7 +127,7 @@
             <category term="Security"/>
             <category term="JAVA"/>
 
-        <updated>2021-09-25T14:06:43+10:00</updated>
+        <updated>2021-10-02T10:54:14+10:00</updated>
             <summary>
                 <![CDATA[
                         <img src="https://lurninghut.com/media/posts/16/Screen-Shot-2021-09-22-at-7.00.13-am.png" alt="" />
@@ -383,107 +491,6 @@
 <li>Dev account user will use its own <a href="https://lurninghut.com/aws-credentials.html">credentials</a> to call IAM/STS service's <a href="https://aws.amazon.com/premiumsupport/knowledge-center/iam-assume-role-cli/" target="_blank" rel="noopener noreferrer">assume role operation</a> with request to assume role (Privileged Access Role shown in the image) present in Prod account.</li>
 <li>STS service will then verify the request by checking the policy attached with the role including the trust policy and on successful verification will return a set of temporary credentials. By default, temporary security credentials for an IAM user are valid for a <strong>maximum of 12 hours</strong>. But you can request a duration as short as 15 minutes or as long as 36 hours using the DurationSeconds parameter. For security reasons, a token for an AWS account root user is restricted to a duration of one hour.</li>
 </ul>
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>Manage JDK version in MacOS </title>
-        <author>
-            <name>Gaurav Bhatt</name>
-        </author>
-        <link href="https://lurninghut.com/switch-jdk-version-in-macos.html"/>
-        <id>https://lurninghut.com/switch-jdk-version-in-macos.html</id>
-            <category term="JAVA"/>
-
-        <updated>2021-09-13T17:00:35+10:00</updated>
-            <summary>
-                <![CDATA[
-                    MacOS provides a very streamlined way of managing JDK installations. Use the following command to list all the installed jdk versions: /usr/libexec/java_home -V and you will see the following output: export JAVA_HOME=`/usr/libexec/java_home -v 11` Following screen commands show a scenario where existing Java version 1.8&hellip;
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                <p>MacOS provides a very streamlined way of managing JDK installations. Use the following command to list all the installed jdk versions:</p>
-<pre>/usr/libexec/java_home -V</pre>
-<p>and you will see the following output:</p>
-<figure class="post__image"><img loading="lazy"  src="https://lurninghut.com/media/posts/8/java_home.png" sizes="(max-width: 48em) 100vw, 768px" srcset="https://lurninghut.com/media/posts/8/responsive/java_home-xs.png 300w ,https://lurninghut.com/media/posts/8/responsive/java_home-sm.png 480w ,https://lurninghut.com/media/posts/8/responsive/java_home-md.png 768w ,https://lurninghut.com/media/posts/8/responsive/java_home-lg.png 1024w ,https://lurninghut.com/media/posts/8/responsive/java_home-xl.png 1360w ,https://lurninghut.com/media/posts/8/responsive/java_home-2xl.png 1600w"  alt="" width="1862" height="218"></figure>
-<h3>Exporting specific JAVA_HOME version</h3>
-<pre>export JAVA_HOME=`/usr/libexec/java_home -v 11`</pre>
-<p>Following screen commands show a scenario where existing Java version 1.8 is switched to Java version 11.</p>
-<figure class="post__image"><img loading="lazy"  src="https://lurninghut.com/media/posts/8/jdkversion.png" sizes="(max-width: 48em) 100vw, 768px" srcset="https://lurninghut.com/media/posts/8/responsive/jdkversion-xs.png 300w ,https://lurninghut.com/media/posts/8/responsive/jdkversion-sm.png 480w ,https://lurninghut.com/media/posts/8/responsive/jdkversion-md.png 768w ,https://lurninghut.com/media/posts/8/responsive/jdkversion-lg.png 1024w ,https://lurninghut.com/media/posts/8/responsive/jdkversion-xl.png 1360w ,https://lurninghut.com/media/posts/8/responsive/jdkversion-2xl.png 1600w"  alt="" width="1124" height="318"></figure>
-<p>Similarly we can do for various scenarios:</p>
-<ul class="">
-<li id="1d99" class="gm gn dd go b gp gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf hg hh hi hj hm hn ho bq" data-selectable-paragraph="">Set <code class="ea eb ec ed ee b">JAVA_HOME</code> to JDK version 1.7</li>
-</ul>
-<pre class="ja jb jc jd je jf jg bx"><span id="eb1f" class="bq hy hz dd ee b jh ji jj s jk" data-selectable-paragraph="">export JAVA_HOME=`/usr/libexec/java_home -v 1.7`</span></pre>
-<ul class="">
-<li id="cde3" class="gm gn dd go b gp gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf hg hh hi hj hm hn ho bq" data-selectable-paragraph="">Set <code class="ea eb ec ed ee b">JAVA_HOME</code> to the default JDK</li>
-</ul>
-<pre class="ja jb jc jd je jf jg bx"><span id="a855" class="bq hy hz dd ee b jh ji jj s jk" data-selectable-paragraph="">export JAVA_HOME=`/usr/libexec/java_home`</span></pre>
-<ul class="">
-<li id="8bb2" class="gm gn dd go b gp gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf hg hh hi hj hm hn ho bq" data-selectable-paragraph="">Check <code class="ea eb ec ed ee b">JAVA_HOME</code></li>
-</ul>
-<pre class="ja jb jc jd je jf jg bx"><span id="51d8" class="bq hy hz dd ee b jh ji jj s jk" data-selectable-paragraph="">$ echo $JAVA_HOME <br>/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home</span></pre>
-<ul class="">
-<li id="e6b3" class="gm gn dd go b gp gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf hg hh hi hj hm hn ho bq" data-selectable-paragraph="">Check the actual java version</li>
-</ul>
-<pre class="ja jb jc jd je jf jg bx"><span id="7b4c" class="bq hy hz dd ee b jh ji jj s jk" data-selectable-paragraph="">$ java -version<br>java version "1.8.0_121"<br>Java(TM) SE Runtime Environment (build 1.8.0_121-b13)<br>Java HotSpot(TM) 64-Bit Server VM (build 25.121-b13, mixed mode)</span></pre>
-<h4>Execute command with different JDK versions</h4>
-<p id="d19a" class="gm gn dd go b gp iv gr gs gt iw gv gw gx ix gz ha hb iy hd he hf iz hh hi hj cw bq" data-selectable-paragraph=""><code class="ea eb ec ed ee b">java_home --exec &lt;command&gt;</code> can be used to execute Java commands irrespective of the current setting of <code class="ea eb ec ed ee b">$JAVA_HOME</code>.</p>
-<p id="1ad9" class="gm gn dd go b gp gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf hg hh hi hj cw bq" data-selectable-paragraph="">Consider the example of executing three different versions of the java command without changing <code class="ea eb ec ed ee b">$JAVA_HOME</code>:</p>
-<ul class="">
-<li id="e954" class="gm gn dd go b gp gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf hg hh hi hj hm hn ho bq" data-selectable-paragraph="">Using current<code class="ea eb ec ed ee b">$JAVA_HOME</code></li>
-</ul>
-<pre class="ja jb jc jd je jf jg bx"><span id="3a25" class="bq hy hz dd ee b jh ji jj s jk" data-selectable-paragraph="">$ echo $JAVA_HOME <br>/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home<br>$ java -version<br>java version "1.6.0_65"</span></pre>
-<ul class="">
-<li id="d75d" class="gm gn dd go b gp gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf hg hh hi hj hm hn ho bq" data-selectable-paragraph="">Using specific version with <code class="ea eb ec ed ee b">java_home --exec java -v 1.7</code></li>
-</ul>
-<pre class="ja jb jc jd je jf jg bx"><span id="a643" class="bq hy hz dd ee b jh ji jj s jk" data-selectable-paragraph="">$ /usr/libexec/java_home -v 1.7 --exec java -version<br>java version "1.7.0_45"</span></pre>
-<ul class="">
-<li id="8b2a" class="gm gn dd go b gp gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf hg hh hi hj hm hn ho bq" data-selectable-paragraph="">Using default version with <code class="ea eb ec ed ee b">java_home --exec java</code></li>
-</ul>
-<pre class="ja jb jc jd je jf jg bx"><span id="01b1" class="bq hy hz dd ee b jh ji jj s jk" data-selectable-paragraph="">$ /usr/libexec/java_home --exec java -version<br>java version "1.8.0_121"</span></pre>
-<p> </p>
-<h4>Use Alias to switch JDKs</h4>
-<p>Every shell (bash, zsh) has its own profile file like .bash_profile or .zprofile where we can set alias of commands as follows:</p>
-<pre># alias commands to enable easy setting of JDK version<br>alias setJDK6='export JAVA_HOME=`/usr/libexec/java_home -v 1.6`'<br>alias setJDK7='export JAVA_HOME=`/usr/libexec/java_home -v 1.7`'<br>alias setJDK8='export JAVA_HOME=`/usr/libexec/java_home -v 1.8`'<br><br># set to the default JDK<br>export JAVA_HOME=`/usr/libexec/java_home`</pre>
-<p>We can then easily use the above aliases to switch the environment as follows:</p>
-<pre class="ja jb jc jd je jf jg bx"><span id="b090" class="bq hy hz dd ee b jh ji jj s jk" data-selectable-paragraph="">$ setJDK8</span></pre>
-<p id="ee2e" class="gm gn dd go b gp gq gr gs gt gu gv gw gx gy gz ha hb hc hd he hf hg hh hi hj cw bq" data-selectable-paragraph="">Check <code class="ea eb ec ed ee b">$JAVA_HOME</code></p>
-<pre class="ja jb jc jd je jf jg bx"><span id="36f8" class="bq hy hz dd ee b jh ji jj s jk" data-selectable-paragraph="">$ echo $JAVA_HOME <br>/Library/Java/JavaVirtualMachines/jdk1.8.0_121.jdk/Contents/Home</span></pre>
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>Difference between Root user and IAM user</title>
-        <author>
-            <name>Gaurav Bhatt</name>
-        </author>
-        <link href="https://lurninghut.com/aws-iam-service.html"/>
-        <id>https://lurninghut.com/aws-iam-service.html</id>
-            <category term="AWS"/>
-
-        <updated>2021-09-13T02:04:58+10:00</updated>
-            <summary>
-                <![CDATA[
-                    Amazon Web Services require a central management system to manage all the users and the access rules. It would have been a nightmare for Amazon as well its customers if every service would provide its own access and management solution. IAM thus becomes a very&hellip;
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                <p>Amazon Web Services require a central management system to manage all the users and the access rules. It would have been a nightmare for Amazon as well its customers if every service would provide its own access and management solution. <a href="https://aws.amazon.com/iam" target="_blank" rel="noopener noreferrer">IAM</a> thus becomes a very crucial service and it becomes essential for the customers of AWS to understand how this whole setup works.</p>
-<h2>Types of Users</h2>
-<p>There are two distinct users on a very high level:</p>
-<ol>
-<li>Root user</li>
-<li>IAM user</li>
-</ol>
-<h4>Root user</h4>
-<p>To create an account with AWS, we need to provide an email address which is used to create a sign-in identity which is called as <strong><em>Root user</em></strong>. To sign in as a root user, you need to use the email address and password used while creating the AWS account. </p>
-<p><img loading="lazy" src="https://docs.aws.amazon.com/IAM/latest/UserGuide/images/sign-in-root-user-capture.png" data-is-external-image="true"  alt="Signing in to the AWS Management Console as an IAM user or root user - AWS  Identity and Access Management"> </p>
-<h4>IAM user</h4>
-<p>Any user that is created using IAM console will be called as IAM User. Note the difference that the root user was never created using IAM </p>
-<p><img loading="lazy" src="https://d2908q01vomqb2.cloudfront.net/22d200f8670dbdb3e253a90eee5098477c95c23d/2016/11/02/RMoncur1Phase0.png" data-is-external-image="true"  alt="Now Create and Manage Users More Easily with the AWS IAM Console | AWS  Security Blog"></p>
             ]]>
         </content>
     </entry>
