@@ -74,6 +74,18 @@
                 "cssClass": "",
                 "isHidden": false,
                 "items": []
+            },
+            {
+                "id": 1633832527207,
+                "label": "Kafka",
+                "title": "",
+                "type": "tag",
+                "target": "_self",
+                "rel": "",
+                "link": 9,
+                "cssClass": "",
+                "isHidden": false,
+                "items": []
             }
         ]
     }
