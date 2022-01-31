@@ -3,12 +3,57 @@
     <title>lurninghut</title>
     <link href="https://lurninghut.com/feed.xml" rel="self" />
     <link href="https://lurninghut.com" />
-    <updated>2021-10-10T13:11:09+11:00</updated>
+    <updated>2022-01-31T12:57:59+11:00</updated>
     <author>
         <name>Gaurav Bhatt</name>
     </author>
     <id>https://lurninghut.com</id>
 
+    <entry>
+        <title>Create jar from Proto files</title>
+        <author>
+            <name>Gaurav Bhatt</name>
+        </author>
+        <link href="https://lurninghut.com/create-jar-from-proto-files.html"/>
+        <id>https://lurninghut.com/create-jar-from-proto-files.html</id>
+            <category term="JAVA"/>
+
+        <updated>2022-01-31T12:57:59+11:00</updated>
+            <summary>
+                <![CDATA[
+                    Protobuf is one of the formats used by programs to communicate with each other over a network. It is Google's IDL (Interface definition language) to describe the structure of any data which then can be used to generate source code to parse a stream of&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p>Protobuf is one of the formats used by programs to communicate with each other over a network. It is Google's IDL (Interface definition language) to describe the structure of any data which then can be used to generate source code to parse a stream of bytes that represent that structured data.</p>
+<h3>Demo</h3>
+<p>Following is a demo of how to create a jar file out of proto files.</p>
+<figure class="post__video"><iframe loading="lazy" width="560" height="314" src="https://www.youtube.com/embed/Hsd-yznn1ms" allowfullscreen="allowfullscreen" data-mce-fragment="1"></iframe></figure>
+<p>In this blog we will use a gradle plugin to generate Java class files from a .proto file.</p>
+<p>Create a sample gradle project in intellij:</p>
+<figure class="post__image"><img loading="lazy"  src="https://lurninghut.com/media/posts/22/Screenshot-2022-01-31-at-11.19.30-AM.png" sizes="(max-width: 48em) 100vw, 768px" srcset="https://lurninghut.com/media/posts/22/responsive/Screenshot-2022-01-31-at-11.19.30-AM-xs.png 300w ,https://lurninghut.com/media/posts/22/responsive/Screenshot-2022-01-31-at-11.19.30-AM-sm.png 480w ,https://lurninghut.com/media/posts/22/responsive/Screenshot-2022-01-31-at-11.19.30-AM-md.png 768w ,https://lurninghut.com/media/posts/22/responsive/Screenshot-2022-01-31-at-11.19.30-AM-lg.png 1024w ,https://lurninghut.com/media/posts/22/responsive/Screenshot-2022-01-31-at-11.19.30-AM-xl.png 1360w ,https://lurninghut.com/media/posts/22/responsive/Screenshot-2022-01-31-at-11.19.30-AM-2xl.png 1600w"  alt="" width="1942" height="740"></figure>
+<p>Add following 'buildscript' config in the gradle:</p>
+<pre><code>buildscript {</code><br><code>    repositories {</code><br><code>        mavenCentral()</code><br><code>    }</code><br><code>    dependencies {</code><br><code>        classpath 'com.google.protobuf:protobuf-gradle-plugin:0.8.12'</code><br><code>    }</code><br><code>}</code></pre>
+<p>Add 'apply plugin':</p>
+<pre>apply plugin: 'com.google.protobuf'</pre>
+<p>Following are the tasks that will be added to the gradle tasks list:</p>
+<figure class="post__image"><img loading="lazy"  src="https://lurninghut.com/media/posts/22/Screenshot-2022-01-31-at-11.25.01-AM.png" sizes="(max-width: 48em) 100vw, 768px" srcset="https://lurninghut.com/media/posts/22/responsive/Screenshot-2022-01-31-at-11.25.01-AM-xs.png 300w ,https://lurninghut.com/media/posts/22/responsive/Screenshot-2022-01-31-at-11.25.01-AM-sm.png 480w ,https://lurninghut.com/media/posts/22/responsive/Screenshot-2022-01-31-at-11.25.01-AM-md.png 768w ,https://lurninghut.com/media/posts/22/responsive/Screenshot-2022-01-31-at-11.25.01-AM-lg.png 1024w ,https://lurninghut.com/media/posts/22/responsive/Screenshot-2022-01-31-at-11.25.01-AM-xl.png 1360w ,https://lurninghut.com/media/posts/22/responsive/Screenshot-2022-01-31-at-11.25.01-AM-2xl.png 1600w"  alt="" width="978" height="962"></figure>
+<p> </p>
+<p>Below is an example of a sample cart.proto file added under 'proto' folder inside 'main' directory. Note that 'java_package' and 'java_multiple_files' are attributes to provide guidance to the protobuf compiler while generating class files.</p>
+<figure class="post__image"><img loading="lazy"  src="https://lurninghut.com/media/posts/22/Screenshot-2022-01-31-at-11.35.33-AM.png" sizes="(max-width: 48em) 100vw, 768px" srcset="https://lurninghut.com/media/posts/22/responsive/Screenshot-2022-01-31-at-11.35.33-AM-xs.png 300w ,https://lurninghut.com/media/posts/22/responsive/Screenshot-2022-01-31-at-11.35.33-AM-sm.png 480w ,https://lurninghut.com/media/posts/22/responsive/Screenshot-2022-01-31-at-11.35.33-AM-md.png 768w ,https://lurninghut.com/media/posts/22/responsive/Screenshot-2022-01-31-at-11.35.33-AM-lg.png 1024w ,https://lurninghut.com/media/posts/22/responsive/Screenshot-2022-01-31-at-11.35.33-AM-xl.png 1360w ,https://lurninghut.com/media/posts/22/responsive/Screenshot-2022-01-31-at-11.35.33-AM-2xl.png 1600w"  alt="" width="1660" height="588"></figure>
+<p> </p>
+<p>Now when we run the generateProto task as shown below, we can see it has generated the corresponding Java files which will be present under the 'generated' folder inside build directory.</p>
+<figure class="post__image"><img loading="lazy"  src="https://lurninghut.com/media/posts/22/Screenshot-2022-01-31-at-11.39.09-AM.png" sizes="(max-width: 48em) 100vw, 768px" srcset="https://lurninghut.com/media/posts/22/responsive/Screenshot-2022-01-31-at-11.39.09-AM-xs.png 300w ,https://lurninghut.com/media/posts/22/responsive/Screenshot-2022-01-31-at-11.39.09-AM-sm.png 480w ,https://lurninghut.com/media/posts/22/responsive/Screenshot-2022-01-31-at-11.39.09-AM-md.png 768w ,https://lurninghut.com/media/posts/22/responsive/Screenshot-2022-01-31-at-11.39.09-AM-lg.png 1024w ,https://lurninghut.com/media/posts/22/responsive/Screenshot-2022-01-31-at-11.39.09-AM-xl.png 1360w ,https://lurninghut.com/media/posts/22/responsive/Screenshot-2022-01-31-at-11.39.09-AM-2xl.png 1600w"  alt="" width="2822" height="958"></figure>
+<p>Add following dependency in the project:</p>
+<pre>dependencies {<br>    implementation 'com.google.protobuf:protobuf-java:3.11.4'<br>}</pre>
+<p>Once added, run the 'jar' task in gradle and check the build/libs directory. The jar task will generate the jar with compiled class files:</p>
+<figure class="post__image"><img loading="lazy"  src="https://lurninghut.com/media/posts/22/Screenshot-2022-01-31-at-11.46.36-AM.png" sizes="(max-width: 48em) 100vw, 768px" srcset="https://lurninghut.com/media/posts/22/responsive/Screenshot-2022-01-31-at-11.46.36-AM-xs.png 300w ,https://lurninghut.com/media/posts/22/responsive/Screenshot-2022-01-31-at-11.46.36-AM-sm.png 480w ,https://lurninghut.com/media/posts/22/responsive/Screenshot-2022-01-31-at-11.46.36-AM-md.png 768w ,https://lurninghut.com/media/posts/22/responsive/Screenshot-2022-01-31-at-11.46.36-AM-lg.png 1024w ,https://lurninghut.com/media/posts/22/responsive/Screenshot-2022-01-31-at-11.46.36-AM-xl.png 1360w ,https://lurninghut.com/media/posts/22/responsive/Screenshot-2022-01-31-at-11.46.36-AM-2xl.png 1600w"  alt="" width="1028" height="598"></figure>
+<p> </p>
+<p>The generated jar can be used by any java application to read or create the corresponding proto message in JVM.</p>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>Motivation for Kafka</title>
         <author>
@@ -18,7 +63,7 @@
         <id>https://lurninghut.com/kafka-fundamentals-motivation-for-kafka.html</id>
             <category term="KAFKA"/>
 
-        <updated>2021-10-10T13:11:09+11:00</updated>
+        <updated>2021-10-10T23:28:29+11:00</updated>
             <summary>
                 <![CDATA[
                     If you wonder what are different industries doing with Apache Kafka, here are some insights. Remember good old days when you would call your friend. Tom calling Ryan The above conversation would let you know how your friend is doing, what are the life events&hellip;
@@ -484,42 +529,6 @@
 <p>If you used the expression ‘<code class="literal">NR % 2 == 1</code>’ instead, the program would print the odd-numbered lines.</p>
 <p> </p>
 <p> </p>
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>Working with Date and Time in Java</title>
-        <author>
-            <name>Gaurav Bhatt</name>
-        </author>
-        <link href="https://lurninghut.com/finding-todays-date-in-java.html"/>
-        <id>https://lurninghut.com/finding-todays-date-in-java.html</id>
-            <category term="JAVA"/>
-
-        <updated>2021-09-14T00:29:55+10:00</updated>
-            <summary>
-                <![CDATA[
-                    The easiest way to find today's date in java is to create a LocalDate, LocalTime or LocalDateTime Object and call its toString() method. All these classes are abstract and therefore in order to get an instance we need to call one of the factory methods.
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                <p>The easiest way to find today's date in java is to create a LocalDate, LocalTime or LocalDateTime Object and call its toString() method.</p>
-<p> </p>
-<p>All these classes are abstract and therefore in order to get an instance we need to call one of the factory methods. All of them have now() method which gives out current date time.</p>
-<h4>Finding today's Date</h4>
-<pre>public class CurrentDateTime {<br><br>    public static void main(String[] args) {<br>       LocalDate dNow = LocalDate.now();<br>       System.out.println(dNow);<br>       LocalTime tNow = LocalTime.now();<br>       System.out.println(tNow);<br>       LocalDateTime now = LocalDateTime.now();<br>       System.out.println(now);<br>    }<br>}</pre>
-<pre>Running it produces this output: <br>2021-01-28 <br>20:22:44.823 <br>2021-01-28T20:22:44.823</pre>
-<p> </p>
-<h4>Formatting Dates and Times</h4>
-<p>Use java.time.format.DateTimeFormatter</p>
-<pre>import java.time.LocalDate;<br>import java.time.ZonedDateTime;<br>import java.time.format.DateTimeFormatter;<br><br>public class JavaDateFormatter {<br>    public static void main(String[] args) {<br>        // Format a date ISO8601-like but with slashes instead of dashes<br>        DateTimeFormatter df = DateTimeFormatter.ofPattern("yyyy/LL/dd");<br>        System.out.println(df.format(LocalDate.now()));<br>        // Parse a String to a date using the same formatter<br>        System.out.println(LocalDate.parse("2014/04/01", df));<br>        // Format a Date and Time without timezone information<br>        DateTimeFormatter nTZ = DateTimeFormatter.ofPattern("d MMMM, yyyy h:mm a");<br>        System.out.println(ZonedDateTime.now().format(nTZ));<br>    }<br>}</pre>
-<h4>Difference Between Two Dates</h4>
-<p>Use the static method Period.between() to find the difference between two LocalDates.</p>
-<pre>import java.time.LocalDate;<br>import java.time.Period;<br><br>public class DateDiff {<br>    public static void main(String[] args) {<br>        /** The date at the end of the last century */<br>        LocalDate endofCentury = LocalDate.of(2000, 12, 31);<br>        LocalDate now = LocalDate.now();<br>        Period diff = Period.between(endofCentury, now);<br>        System.out.printf("The 21st century (up to %s) is %s old%n", now, diff);<br>        System.out.printf(<br>                "The 21st century is %d years, %d months and %d days old",<br>                diff.getYears(), diff.getMonths(), diff.getDays());<br>    }<br>}</pre>
-<h4>Adding to or Subtracting from a Date or Calendar</h4>
-<p>Use the Period class from java.time which represents a length of time, such as a number of days, or hours and minutes. </p>
-<pre>import java.time.LocalDate;<br>import java.time.Period;<br><br>/**<br> * DateAdd -- compute the difference between two dates<br> * (e.g., today and 700 days from now).<br> */<br>public class DateAdd {<br>    public static void main(String[] av) {<br>        /** Today's date */<br>        LocalDate now = LocalDate.now();<br>        Period p = Period.ofDays(700);<br>        LocalDate then = now.plus(p);<br>        System.out.printf("Seven hundred days from %s is %s%n", now, then);<br>    }<br>}</pre>
             ]]>
         </content>
     </entry>
