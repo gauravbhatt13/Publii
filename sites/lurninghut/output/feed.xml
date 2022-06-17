@@ -3,12 +3,63 @@
     <title>lurninghut</title>
     <link href="https://lurninghut.com/feed.xml" rel="self" />
     <link href="https://lurninghut.com" />
-    <updated>2022-01-31T12:57:59+11:00</updated>
+    <updated>2022-06-10T07:54:12+10:00</updated>
     <author>
         <name>Gaurav Bhatt</name>
     </author>
     <id>https://lurninghut.com</id>
 
+    <entry>
+        <title>Ansible and AWS</title>
+        <author>
+            <name>Gaurav Bhatt</name>
+        </author>
+        <link href="https://lurninghut.com/ansible-and-aws.html"/>
+        <id>https://lurninghut.com/ansible-and-aws.html</id>
+            <category term="AWS"/>
+
+        <updated>2022-06-10T07:54:12+10:00</updated>
+            <summary>
+                <![CDATA[
+                    Configuration is a powerful tool used by automation frameworks to hide code complexity and thus enhance productivity. In the world of cloud computing and IaC (Infrastructure as Code) tools like Ansible help a cloud engineer to perform complex deployments by wrapping multiple complex low level&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p class="align-left">Configuration is a powerful tool used by automation frameworks to hide code complexity and thus enhance productivity. In the world of cloud computing and IaC (Infrastructure as Code) tools like <a href="https://www.ansible.com/" target="_blank" rel="noopener noreferrer">Ansible</a> help a cloud engineer to perform complex deployments by wrapping multiple complex low level API calls under a simple yaml configuration. In this article, I am going to show how we can use Ansible to create resources in AWS and manage them.</p>
+<h3>Demo</h3>
+<figure class="post__video"><iframe loading="lazy" width="560" height="314" src="https://www.youtube.com/embed/ukwFCbZd0aM" allowfullscreen="allowfullscreen" data-mce-fragment="1"></iframe></figure>
+<p>Create an empty project in Intellij with the following directory structure:</p>
+<figure class="post__image"><img loading="lazy"  src="https://lurninghut.com/media/posts/24/Screenshot-2022-06-10-at-12.00.09-AM.png" sizes="(max-width: 48em) 100vw, 768px" srcset="https://lurninghut.com/media/posts/24/responsive/Screenshot-2022-06-10-at-12.00.09-AM-xs.png 300w ,https://lurninghut.com/media/posts/24/responsive/Screenshot-2022-06-10-at-12.00.09-AM-sm.png 480w ,https://lurninghut.com/media/posts/24/responsive/Screenshot-2022-06-10-at-12.00.09-AM-md.png 768w ,https://lurninghut.com/media/posts/24/responsive/Screenshot-2022-06-10-at-12.00.09-AM-lg.png 1024w ,https://lurninghut.com/media/posts/24/responsive/Screenshot-2022-06-10-at-12.00.09-AM-xl.png 1360w ,https://lurninghut.com/media/posts/24/responsive/Screenshot-2022-06-10-at-12.00.09-AM-2xl.png 1600w"  alt="" width="294" height="288"></figure>
+<p>Lets understand the folder structure:</p>
+<ul>
+<li><strong>ansible</strong>: This is the root folder of the project.</li>
+<li><strong>inventory</strong>: Keep config files containing information about the machines where deployments will take place.</li>
+<li><strong>roles</strong>: A way to group tasks together.</li>
+<li><strong>deploy</strong>: Logical action to group tasks which are part of an important step in Application's continuous delivery. e.g. The deployment of a web application which contains tasks such as creating database stack and web stack.</li>
+<li><strong>files</strong>: Folder to keep cloud formation templates for different application stacks like creation of all IAM policies, EC2 instances etc.</li>
+<li><strong>tasks</strong>: Ansible modules or commands which will perform some action like file copy, AWS stack creation etc.</li>
+</ul>
+<ol>
+<li>Create 'dev' file inside 'ansible/inventory' folder as below:<br><br><figure class="post__image"><img loading="lazy"  src="https://lurninghut.com/media/posts/24/Screenshot-2022-06-10-at-12.16.10-AM.png" sizes="(max-width: 48em) 100vw, 768px" srcset="https://lurninghut.com/media/posts/24/responsive/Screenshot-2022-06-10-at-12.16.10-AM-xs.png 300w ,https://lurninghut.com/media/posts/24/responsive/Screenshot-2022-06-10-at-12.16.10-AM-sm.png 480w ,https://lurninghut.com/media/posts/24/responsive/Screenshot-2022-06-10-at-12.16.10-AM-md.png 768w ,https://lurninghut.com/media/posts/24/responsive/Screenshot-2022-06-10-at-12.16.10-AM-lg.png 1024w ,https://lurninghut.com/media/posts/24/responsive/Screenshot-2022-06-10-at-12.16.10-AM-xl.png 1360w ,https://lurninghut.com/media/posts/24/responsive/Screenshot-2022-06-10-at-12.16.10-AM-2xl.png 1600w"  alt="" width="1222" height="146"></figure><strong><br><br>[aws]</strong> : Name of the configuration used to refer by ansible configuration which points to ip address / dns name of the hosts machines where the script will be executed.<br><strong>ansible_connection</strong>: This will let ansible know that connection with the host where the script will execute is 'local'. Other possible values could be 'ansible_connection=ssh'.<br><strong>ansible_python_interpreter</strong>: To tell the version of python to be used.<br><br></li>
+<li>Create 'cf-stacks.yaml' under 'ansible' folder with the following code:<br>
+<pre>---<br>- hosts: aws<br>  roles:<br>    - deploy</pre>
+<strong>hosts</strong>: This points to the machines declared in the inventory which will execute the ansible module/tasks which in this case will be 'localhost'.<br><strong>roles</strong>: This is used to indicate the folder to look for which would contain tasks directory with main.yaml file.<br><br></li>
+<li>Create the cloudformation template 's3.yaml' inside 'ansible/roles/deploy/files'.<br>
+<pre>AWSTemplateFormatVersion: "2010-09-09"<br>Description: 'S3 Stack'<br>Resources:<br>  MainBucket:<br>    Type: "AWS::S3::Bucket"<br>    Properties:<br>      BucketName: 'lh-gb-test'</pre>
+</li>
+<li>Create 's3.yaml' under 'ansible/roles/deploy/tasks'.<br>
+<pre>---<br>- name: Creating CFN Stack<br>  cloudformation:<br>    stack_name: "my-app-stack"<br>    template: "roles/deploy/files/s3.yaml"<br>    state: 'absent'<br>  register: logs<br>- debug:<br>    var: logs</pre>
+</li>
+<li>Create 'main.yaml' inside 'ansible/roles/deploy/tasks'.<br>
+<pre>---<br>- name: Deploy S3<br>  include: s3.yaml<br>  tags:<br>    s3</pre>
+Once above files have been created, run the following command under directory 'ansible'
+<pre>ansible-playbook -i inventory/dev cf-stacks.yaml --tags s3</pre>
+Once the command completes successfully you can go to S3 web console and should be able to see a new bucket created.</li>
+</ol>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>Create jar from Proto files</title>
         <author>
@@ -472,62 +523,6 @@
 <h4>STS and Roles chemistry</h4>
 <p>STS service (by default a global service but can be configured with region endpoints) has assume role action which is called by the client which need temporary credentials for any role they want to assume. For example if all the developers want to assume a 'dev' role created in IAM roles then they will call STS which will verify the trust relationship of the role with the client. Every role while being created in IAM will provide a trust policy specifying Principal who can assume the role like any specific user in any account or an EC2 service. The image below shows cross account access using IAM roles to allow user Joe in a different account to access Dynamo DB in another account.</p>
 <p><img loading="lazy" src="https://media.amazonwebservices.com/blog/iam_delegate_cross_account_api_access_1.png" data-is-external-image="true"  alt="Delegating API Access to AWS Services Using IAM Roles | AWS News Blog"></p>
-<p> </p>
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>awk pattern scanning and processing</title>
-        <author>
-            <name>Gaurav Bhatt</name>
-        </author>
-        <link href="https://lurninghut.com/awk-pattern-scanning-and-processing.html"/>
-        <id>https://lurninghut.com/awk-pattern-scanning-and-processing.html</id>
-            <category term="UNIX"/>
-
-        <updated>2021-09-16T01:23:52+10:00</updated>
-            <summary>
-                <![CDATA[
-                    Awk is used to write effective programs that define text patterns to be searched for in each line of a document and the action that is to be taken when a match is found within a line. Syntax: awk options 'criteria {action}' input-file &gt; output-file&hellip;
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                <p>Awk is used to write effective programs that define text patterns to be searched for in each line of a document and the action that is to be taken when a match is found within a line.</p>
-<p><strong>Syntax:</strong></p>
-<pre>awk options 'criteria {action}' input-file &gt; output-file</pre>
-<pre><strong>e.g.</strong> awk '{print}' employee.txt</pre>
-<p><strong>Options:</strong>  </p>
-<pre>-f program-file : Reads the AWK program source from the file 
-                  program-file, instead of from the 
-                  first command line argument.<br><br>
--F fs            : Use fs for the input field separator</pre>
-<pre><code> awk -F: '{print $4'</code><br><br><code>-F &lt;value&gt;</code> - tells <code>awk</code> what field separator to use. In your case, <code>-F:</code> means that the separator is <code>:</code> (colon).<br><br><strong>e.g. </strong>echo <code>Hello:my:name:is:Alaa</code> | awk -F: '{print $4}'</pre>
-<h4 id="Very-Simple" class="title">Some Simple Examples</h4>
-<p>The following command runs a simple <code class="command">awk</code> program that searches the input file <code class="filename">mail-list</code> for the character string ‘<code class="literal">li</code>’ </p>
-<pre class="screen">awk '/li/ { print $0 }' mail-list<br><br>The slashes indicate that ‘<code class="literal">li</code>’ is the pattern to search for. <br><br>There are single quotes around the <code class="command">awk</code> program so that the shell won’t interpret any of it as special shell characters.<br><br>In an <code class="command">awk</code> rule, either the pattern or the action can be omitted, but not both.<br><br>If the pattern is omitted, then the action is performed for <span class="emphasis"><em>every</em></span> input line. If the action is omitted, the default action is to print all lines that match the pattern.</pre>
-<p>Print every line that is longer than 80 characters:</p>
-<pre class="screen">awk 'length($0) &gt; 80' data<br><br>The rule has a relational expression as its pattern and has no action—so it uses the default action, printing the record</pre>
-<p>Print the length of the longest input line:</p>
-<pre class="screen">awk '{ if (length($0) &gt; max) max = length($0) }
-     END { print max }' data<br><br>The code associated with <code class="literal">END</code> executes after all input has been read; it’s the other side of the coin to <code class="literal">BEGIN</code>.</pre>
-<p>Delete blank lines from a file (or rather, to create a new file similar to the old file but from which the blank lines have been removed):</p>
-<pre class="screen">awk 'NF &gt; 0' data<br><br>Print every line that has at least one field</pre>
-<p>Print seven random numbers from 0 to 100, inclusive:</p>
-<pre class="screen">awk 'BEGIN { for (i = 1; i &lt;= 7; i++)
-                 print int(101 * rand()) }'</pre>
-<p>Print the total number of kilobytes used by <em class="replaceable"><code>files</code></em>:</p>
-<pre class="screen">ls -l <em class="replaceable"><code>files</code></em> | awk '{ x += $5 } END { print "total K-bytes:", x / 1024 }'</pre>
-<p>Print a sorted list of the names of all users:</p>
-<pre class="screen">awk -F: '{ print $1 }' /etc/passwd | sort</pre>
-<p> </p>
-<p>Count the number of lines in a file:</p>
-<pre class="screen">awk 'END { print NR }' data-file</pre>
-<p> </p>
-<p>Print even-numbered lines in the datafile:</p>
-<pre class="screen">awk 'NR % 2 == 0' data-file</pre>
-<p>If you used the expression ‘<code class="literal">NR % 2 == 1</code>’ instead, the program would print the odd-numbered lines.</p>
-<p> </p>
 <p> </p>
             ]]>
         </content>
