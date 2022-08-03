@@ -3,12 +3,84 @@
     <title>lurninghut</title>
     <link href="https://lurninghut.com/feed.xml" rel="self" />
     <link href="https://lurninghut.com" />
-    <updated>2022-06-19T01:23:04+10:00</updated>
+    <updated>2022-08-04T06:52:37+10:00</updated>
     <author>
         <name>Gaurav Bhatt</name>
     </author>
     <id>https://lurninghut.com</id>
 
+    <entry>
+        <title>Sorting algorithms</title>
+        <author>
+            <name>Gaurav Bhatt</name>
+        </author>
+        <link href="https://lurninghut.com/sorting-algorithms.html"/>
+        <id>https://lurninghut.com/sorting-algorithms.html</id>
+
+        <updated>2022-08-04T06:52:37+10:00</updated>
+            <summary>
+                <![CDATA[
+                    Sorting is a very important concept when it comes to problem solving during any interview. There are a number of ways in which we can sort a given array but to find the most efficient way needs logical thinking and some imagination to write code&hellip;
+                ]]>
+            </summary>
+        <content type="html">
+            <![CDATA[
+                <p class="align-left">Sorting is a very important concept when it comes to problem solving during any interview. There are a number of ways in which we can sort a given array but to find the most efficient way needs logical thinking and some imagination to write code around it. Sorting has a cost in terms of time and space requirements and any efficient algorithm will try to optimise the time it takes to sort by reducing number of comparisons and any extra space needed. The most common out-of-the-box algorithms provided as part of standard libraries use Quicksort which as an average runtime of O(n log n) where n is the number of elements to be considered for sorting.<br><br></p>
+<p>Common sorting algorithms and their best and worst-case complexities:</p>
+<table style="border-collapse: collapse; width: 100%;" border="1">
+<tbody>
+<tr>
+<td style="width: 25%;">Sorting</td>
+<td style="width: 25%;">Average</td>
+<td style="width: 25%;">Worst</td>
+<td style="width: 25%;">Use case</td>
+</tr>
+<tr>
+<td style="width: 25%;">Insertion Sort</td>
+<td style="width: 25%;">N^2</td>
+<td style="width: 25%;">N^2</td>
+<td style="width: 25%;">When the size of the array is small.</td>
+</tr>
+<tr>
+<td style="width: 25%;">Quick Sort</td>
+<td style="width: 25%;">N log N</td>
+<td style="width: 25%;">N^2 (When input array is already sorted and we choose left most element as Pivot or When input array is reverse sorted and we choose rightmost element as pivot)</td>
+<td style="width: 25%;">
+<p>Standard algorithm provided by libraries.<br><strong>Pros</strong></p>
+<p>Can be in place without needing extra space.</p>
+<p><br><strong>Cons</strong><br>Its not stable which means order of elements is not preserved when they are same.<br><br></p>
+</td>
+</tr>
+<tr>
+<td style="width: 25%;">Merge Sort</td>
+<td style="width: 25%;">N log N</td>
+<td style="width: 25%;">N log N</td>
+<td style="width: 25%;"><strong>Pros</strong><br>Stable algorithm<br><br><strong>Cons</strong><br>Not in-place. Needs extra space.</td>
+</tr>
+<tr>
+<td style="width: 25%;">Heap Sort</td>
+<td style="width: 25%;">N log N</td>
+<td style="width: 25%;">N log N</td>
+<td style="width: 25%;"><strong>Pros<br><br></strong>In place and worst case is better than Quick Sort.</td>
+</tr>
+<tr>
+<td style="width: 25%;">Radix Sort</td>
+<td style="width: 25%;">N * k</td>
+<td style="width: 25%;">N * k</td>
+<td style="width: 25%;">
+<p>Its a non comparison sort running in linear time.</p>
+<p><strong>Pros</strong></p>
+<p>Stable sort</p>
+<p><br><strong>Cons</strong></p>
+<p>Not in-place</p>
+</td>
+</tr>
+</tbody>
+</table>
+<p> </p>
+            ]]>
+        </content>
+    </entry>
     <entry>
         <title>Java and Docker development environment</title>
         <author>
@@ -481,55 +553,6 @@ Once the command completes successfully you can go to S3 web console and should 
 <p>Also make sure that we change the git configuration to configure default directory as follows:</p>
 <pre class="lj lk ll lm ln ow gv be"><span id="b2cc" class="ej ox mu dm ov b kn oy oz s pa" data-selectable-paragraph="">git config --global init.defaultBranch main<br></span></pre>
 <p>The above command will make sure that every next time you create a new git repository locally, it will create default branch with 'main' as the branch name.</p>
-            ]]>
-        </content>
-    </entry>
-    <entry>
-        <title>HTTP Basics</title>
-        <author>
-            <name>Gaurav Bhatt</name>
-        </author>
-        <link href="https://lurninghut.com/http-basics.html"/>
-        <id>https://lurninghut.com/http-basics.html</id>
-            <category term="Networking"/>
-
-        <updated>2021-09-17T05:37:00+10:00</updated>
-            <summary>
-                <![CDATA[
-                    HTTP is the primary application layer protocol that rules our internet. You can read this webpage because your browser just used this protocol to talk to the computer hosting this webpage using HTTP protocol. Let's break HTTP into smaller pieces to understand the concept. Any&hellip;
-                ]]>
-            </summary>
-        <content type="html">
-            <![CDATA[
-                <p>HTTP is the primary application layer protocol that rules our internet. You can read this webpage because your browser just used this protocol to talk to the computer hosting this webpage using HTTP protocol. Let's break HTTP into smaller pieces to understand the concept.</p>
-<h4>H stands for HyperText</h4>
-<p><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/4/41/Sistema_hipertextual.jpg" data-is-external-image="true" ></p>
-<p>Any document file that we create may link to terms which have definition in some other document file stored locally or in another computer. Hypertext provides a way to link those information so that a complete graph of the document can be navigated just by following the links. This is a very powerful concept that is driving the content present on internet today. A markup language, which is popularly known as HTTP (Hypertext markup language) is used to describe such hyper text which can be understood by the browser and other clients and the documents created using it are known as HTML documents or webpages.</p>
-<h4>Transfer Protocol</h4>
-<p>Every protocol in computer world is governed by a set of rules. When two computer machines talk to each other, they need to follow guidelines to understand the signalling from each other. Purpose of HTTP is to transfer the hypertext between computers so that computers can request for a document or respond to a request by providing the document. Below image shows an HTTP request made using telnet (not browser) program.</p>
-<p><img loading="lazy" src="https://upload.wikimedia.org/wikipedia/commons/c/c6/Http_request_telnet_ubuntu.png" data-is-external-image="true" ></p>
-<p>As we can see above, using rules around requesting and response we can complete transfer of hypertext document between computers.</p>
-<h4>HTTP is an Application Layer protocol</h4>
-<p>What is that? Well since HTTP protocol rule defines how to request for a document and what to expect as a response, it falls under the category of the application layer in various networking models like OSI model or TCP/IP suite. Typically or protocols which define human interaction with a computer fall under the category of the Application layer. Refer to the below image for typical categorisation in OSI model:</p>
-<p><img loading="lazy" src="https://infosys.beckhoff.com/content/1033/tf6310_tc3_tcpip/Images/png/84433547__en-US__Web.png" data-is-external-image="true"  alt="Beckhoff Information System - English"></p>
-<h4> Basic Features</h4>
-<p><img loading="lazy" src="http://apps.testinsane.com/mindmaps/uploads/html/HTTP%20Hypertext%20Transfer%20Protocol_files/images/HTTP%20Hypertext%20Transfer%20Protocol.jpg" data-is-external-image="true" ></p>
-<p>There are three basic features that make HTTP a simple but powerful protocol:</p>
-<ul class="list">
-<li>
-<p><strong>HTTP is connectionless:</strong> The HTTP client, i.e., a browser initiates an HTTP request and after a request is made, the client waits for the response. The server processes the request and sends a response back after which client disconnect the connection. So client and server knows about each other during current request and response only. Further requests are made on new connection like client and server are new to each other.</p>
-</li>
-</ul>
-<figure class="post__image"><img loading="lazy"  src="https://lurninghut.com/media/posts/15/cropped1.png" sizes="(max-width: 48em) 100vw, 768px" srcset="https://lurninghut.com/media/posts/15/responsive/cropped1-xs.png 300w ,https://lurninghut.com/media/posts/15/responsive/cropped1-sm.png 480w ,https://lurninghut.com/media/posts/15/responsive/cropped1-md.png 768w ,https://lurninghut.com/media/posts/15/responsive/cropped1-lg.png 1024w ,https://lurninghut.com/media/posts/15/responsive/cropped1-xl.png 1360w ,https://lurninghut.com/media/posts/15/responsive/cropped1-2xl.png 1600w"  alt="" width="1268" height="716"></figure>
-<ul class="list">
-<li>
-<p><strong>HTTP is media independent:</strong> It means, any type of data can be sent (video, text, audio) over HTTP as long as both the client and the server know how to handle the data content. It is required for the client as well as the server to specify the content type using appropriate MIME-type.</p>
-</li>
-<li>
-<p><strong>HTTP is stateless:</strong> As mentioned above, HTTP is connectionless and it is a direct result of HTTP being a stateless protocol. The server and client are aware of each other only during a current request. Afterwards, both of them forget about each other. Due to this nature of the protocol, neither the client nor the browser can retain information between different requests across the web pages.</p>
-</li>
-</ul>
-<p> </p>
             ]]>
         </content>
     </entry>
